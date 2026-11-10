@@ -19,7 +19,7 @@ function GoSearch(query) {
   const statusElement = document.getElementById("card-text-secondary");
 
   if (!searchQuery) {
-    statusElement.innerHTML = `<small>Вы не указали значение для поиска. (IP, MAC либо название сайта)</small>`;
+    statusElement.innerHTML = `<small>You have not specified a value for the search. (IP, MAC or website name)</small>`;
     return;
   }
 
@@ -41,10 +41,10 @@ function GoSearch(query) {
   const targetUrl = searchSources[dropdownText];
 
   if (targetUrl) {
-    statusElement.innerHTML = `<small>Последний поиск: ${searchQuery}</small>`;
+    statusElement.innerHTML = `<small>Last search: ${searchQuery}</small>`;
     window.open(targetUrl, "_blank");
   } else {
-    statusElement.innerHTML = `<small>Что-то пошло не так, попробуйте перезагрузить страницу <kbd>CTRL + R</kbd></small>`;
+    statusElement.innerHTML = `<small>Something went wrong, try reloading the page. <kbd>CTRL + R</kbd></small>`;
   }
 
 }
